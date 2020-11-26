@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Nunito", sans-serif !important;
+  font-size: 10px;
+}
+body {
+  display: grid;
+  place-items: center;
+  background-color: #086788 !important;
+  overflow: auto;
+}
+
+.parent {
+  display: block;
+  position: relative;
+  min-width: 315px;
+  max-width: 450px;
+  min-height: 657px;
+  height: 65vh;
+  width: 450px;
+  border-radius: 10px;
+  background: white;
+  -webkit-box-shadow: 7px 8px 84px -23px rgba(0, 0, 0, 0.82);
+  -moz-box-shadow: 7px 8px 84px -23px rgba(0, 0, 0, 0.82);
+  box-shadow: 7px 8px 84px -23px rgba(0, 0, 0, 0.82);
+}
+
+.recipient_info {
+  text-align: center;
+  margin-top: 0.5rem !important;
+}
+
+.recipient {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  padding: 2px;
+  margin: 0 !important;
+  justify-content: center;
+  background-color: #191919;
+}
+
+.recipient img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.recipient p {
+  color: white;
+  font-size: 21px;
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+  margin-block-start: 0.2em;
+  margin-block-end: 0.2em;
+}
+
+.recipient span {
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+  line-height: 0.5;
+  padding: 0.3em;
+}
+
+.recipient span > i {
+  color: #82FF9E;
+  font-size: 8px;
+  margin-right: 0.2em;
+} 
+
+#chatbox {
+  position: relative;
+  display: block;
+  flex-wrap: wrap;
+  top: 100px;
+  height: 60vh;
+  width: 100%;
+  padding: 0 15px 0 15px;
+  margin: 0;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.left_chat_bubble {
+  font-size: 14px;
+  padding: 1em;
+  margin-right: auto;
+  margin-left: 0.5em;
+  border: 1px solid #33a1fd;
+  border-radius: 10px 10px 10px 0;
+  color: white;
+  background-color: #33a1fd;
+  -webkit-box-shadow: 7px 8px 84px -23px rgba(0, 0, 0, 0.82);
+  -moz-box-shadow: 7px 8px 84px -23px rgba(0, 0, 0, 0.82);
+  box-shadow: 7px 8px 84px -23px rgba(0, 0, 0, 0.82);
+}
+
+.left_bubble_timer {
+  color: #7fb7be;
+}
+
+.chat_bubble_seperator {
+  height: 1em;
+  width: 100%;
+}
+
+.right_chat_bubble {
+  font-size: 14px;
+  padding: 1em;
+  margin-left: auto;
+  margin-right: 0.5em;
+  border: 1px solid #000004;
+  border-radius: 10px 10px 0px 10px;
+  color: white;
+  background-color: #000004;
+  -webkit-box-shadow: 7px 8px 84px -23px rgba(0, 0, 0, 0.82);
+  -moz-box-shadow: 7px 8px 84px -23px rgba(0, 0, 0, 0.82);
+  box-shadow: 7px 8px 84px -23px rgba(0, 0, 0, 0.82);
+}
+
+.right_bubble_position {
+  float: right;
+  margin: 0 0.5em 0 auto;
+  margin-left: auto;
+  margin-right: 0.5em;
+}
+
+.right_bubble_timer {
+  position: absolute;
+  display: inline-block;
+  text-align: right;
+  top: 6em;
+  left: 19em;
+}
+
+.right_bubble_timer i {
+  font-size: 8px;
+  color: #33a1fd;
+}
+
+
+.mini_pic {
+  border-radius: 50%;
+  width: 20px;
+  margin-right: 10px;
+}
+
+.input_bar {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  bottom: 1em;
+  left: 2em;
+  width: 400px;
+  height: 40px;
+  margin: 0.7em 0 0.7em 0 !important;
+  padding: 0.5em;
+  border-radius: 40px;
+  justify-content: center;
+  border: 1px solid #000004;
+  background-color: #000004;
+}
+
+.input_bar input {
+  color: white;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  line-height: 10px;
+  width: 320px;
+  margin-bottom: 0.8em;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.input_bar input::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+
+.input_bar:hover {
+  opacity: 1;
+  -webkit-box-shadow: 2px 24px 92px 12px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: 2px 24px 92px 12px rgba(0, 0, 0, 0.27);
+  box-shadow: 2px 24px 92px 12px rgba(0, 0, 0, 0.27);
+}
+
+.btn {
+  color: #e6e8e6;
+  float: right;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  text-shadow: 1px;
+  margin: 0.1em;
+  padding: 0.3em;
+  justify-content: end;
+}
+
+.btn i {
+  align-items: center;
+  color: white;
+  opacity: 0.7;
+  font-size: 2em;
+}
+
+.btn i:hover {
+  background-color: transparent;
+  color: white;
+  text-shadow: 0 0 20px white;
+  opacity: 1;
+}
