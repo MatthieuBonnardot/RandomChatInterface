@@ -84,7 +84,7 @@ body {
   display: block;
   flex-wrap: wrap;
   top: 100px;
-  height: 60vh;
+  height:calc(100% - 180px);
   width: 100%;
   padding: 0 15px 0 15px;
   margin: 0;
@@ -92,69 +92,64 @@ body {
   scroll-behavior: smooth;
 }
 
-.left_chat_bubble {
-  font-size: 14px;
-  padding: 1em;
-  margin-right: auto;
-  margin-left: 0.5em;
-  border: 1px solid #33a1fd;
-  border-radius: 10px 10px 10px 0;
-  color: white;
-  background-color: #33a1fd;
-  -webkit-box-shadow: 7px 8px 84px -23px rgba(0, 0, 0, 0.82);
-  -moz-box-shadow: 7px 8px 84px -23px rgba(0, 0, 0, 0.82);
-  box-shadow: 7px 8px 84px -23px rgba(0, 0, 0, 0.82);
-}
-
-.left_bubble_timer {
-  color: #7fb7be;
-}
-
-.chat_bubble_seperator {
-  height: 1em;
+.message_container {
+  display: block;
   width: 100%;
 }
 
-.right_chat_bubble {
-  font-size: 14px;
+.message_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  max-width: 60%;
+  font-size: 17px;
+  align-items: right;
+  align-self: flex-end;
+  width: 100%;
+  
+  color: #fff;
+  /* -webkit-box-shadow: 2px 9px 98px 1px rgba(0, 0, 0, 0.82);
+  -moz-box-shadow: 2px 9px 98px 1px rgba(0, 0, 0, 0.82);
+  box-shadow: 2px 9px 98px 1px rgba(0, 0, 0, 0.82); */
   padding: 1em;
-  margin-left: auto;
-  margin-right: 0.5em;
-  border: 1px solid #000004;
-  border-radius: 10px 10px 0px 10px;
-  color: white;
-  background-color: #000004;
-  -webkit-box-shadow: 7px 8px 84px -23px rgba(0, 0, 0, 0.82);
-  -moz-box-shadow: 7px 8px 84px -23px rgba(0, 0, 0, 0.82);
-  box-shadow: 7px 8px 84px -23px rgba(0, 0, 0, 0.82);
 }
 
-.right_bubble_position {
-  float: right;
-  margin: 0 0.5em 0 auto;
-  margin-left: auto;
-  margin-right: 0.5em;
+.message.left {
+  align-self: flex-start;
+  border-radius: 10px 10px 10px 0 !important;
+  background-color: #33a1fd;
+  border: 1px solid #33a1fd;
 }
 
-.right_bubble_timer {
-  position: absolute;
-  display: inline-block;
-  text-align: right;
-  top: 6em;
-  left: 19em;
+.message.right {
+  align-self: flex-end;
+  border-radius: 10px 10px 0 10px !important;
+  background-color: #000;
+  border: 1px solid #000;
 }
 
-.right_bubble_timer i {
-  font-size: 8px;
+.timer {
+  font-size: 12px;
+  color: black !important;
+  margin-bottom: 20px;
+}
+
+
+.timer.right {
+  align-self: flex-end;
+}
+
+
+.timer.left {
+  align-self: flex-start;
+}
+
+.checkmark {
   color: #33a1fd;
 }
 
-
-.mini_pic {
-  border-radius: 50%;
-  width: 20px;
-  margin-right: 10px;
-}
 
 .input_bar {
   position: absolute;
